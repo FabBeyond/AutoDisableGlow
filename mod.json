@@ -8,7 +8,7 @@
 	},
 	"id": "fabbeyond.layouttools",
 	"name": "Layout Tools",
-	"version": "v1.0.1",
+	"version": "v1.0.2",
 	"developer": "FabBeyond",
 	"description": "Adds a small improvement for making layouts.",
 	"dependencies": {
