@@ -1,0 +1,23 @@
+{
+	"geode": "5.4.1",
+	"gd": {
+		"win": "2.2081",
+		"android": "2.2081",
+		"mac": "2.2081",
+		"ios": "2.2081"
+	},
+	"id": "fabbeyond.layoutools",
+	"name": "Layout Tools",
+	"version": "v1.0.0",
+	"developer": "FabBeyond",
+	"description": "Adds a small improvement for making layouts.",
+	"dependencies": {
+		"geode.node-ids": ">=v1.20.0",
+		"alphalaneous.level-storage-api": ">=v1.0.0"
+	},
+	"resources": {
+		"sprites": [
+			"resources/regularBlock.png"
+		]
+	}
+}
