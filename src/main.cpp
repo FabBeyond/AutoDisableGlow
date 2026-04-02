@@ -20,7 +20,7 @@ protected:
 		settingsLayout->setPosition({140.f, 70.f});
 		settingsLayout->setLayout(ColumnLayout::create()->setAxisReverse(true));
 
-		this->getChildByIndex(0)->addChild(settingsLayout);
+		this->m_mainLayer->addChild(settingsLayout);
 
 		settingsLayout->addChild(createSetting(settingsLayout, "Disable Glow", "disable-glow"));
 		settingsLayout->addChild(createSetting(settingsLayout, "Dont Fade", "dont-fade"));
