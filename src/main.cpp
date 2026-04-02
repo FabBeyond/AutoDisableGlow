@@ -113,9 +113,15 @@ class $modify(EditorPauseLayer) {
 	void saveLevel() {
 		CCArray* objects = m_editorLayer->getAllObjects();
 		for (auto* obj : CCArrayExt<GameObject*>(objects)) {
-			obj->m_isDontEnter = alpha::level_storage::getSavedValue<bool>(m_editorLayer, "dont-enter-toggle"_spr);
-			obj->m_isDontFade = alpha::level_storage::getSavedValue<bool>(m_editorLayer, "dont-fade-toggle"_spr);
-			obj->m_hasNoGlow = alpha::level_storage::getSavedValue<bool>(m_editorLayer, "disable-glow-toggle"_spr);
+			if (alpha::level_storage::getSavedValue<bool>(m_editorLayer, "dont-enter-toggle"_spr)) {
+				obj->m_isDontEnter = true;
+			}
+			if (alpha::level_storage::getSavedValue<bool>(m_editorLayer, "dont-fade-toggle"_spr)) {
+				obj->m_isDontFade = true;
+			}
+			if (alpha::level_storage::getSavedValue<bool>(m_editorLayer, "disable-glow-toggle"_spr)) {
+				obj->m_hasNoGlow = true;
+			}
 		}
 
 		EditorPauseLayer::saveLevel();
